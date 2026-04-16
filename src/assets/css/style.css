@@ -5,12 +5,13 @@
 }
 
 :root {
-  --bg: #0a0a0a;
-  --fg: #e8e8e8;
-  --fg-muted: #888;
-  --accent: #4a7c59;
-  --card-bg: #141414;
-  --border: #2a2a2a;
+  --bg: #0f1f26;
+  --fg: #e8f1f4;
+  --fg-muted: #7a9099;
+  --accent: #4a9b7f;
+  --accent-bright: #b8d944;
+  --card-bg: #1a3038;
+  --border: #2d5a6f;
   --font: system-ui, -apple-system, sans-serif;
   --max-width: 860px;
 }
@@ -21,6 +22,15 @@ body {
   font-family: var(--font);
   line-height: 1.6;
   font-size: 1rem;
+}
+
+a {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-bright);
 }
 
 header {
@@ -79,6 +89,18 @@ footer {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--accent);
+}
+
+.about-logo {
+  float: right;
+  width: 200px;
+  margin: 0 0 1rem 2rem;
+}
+
+.about::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .music {
@@ -196,6 +218,11 @@ details p {
   align-items: start;
 }
 
+.song-cover {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .song-cover img {
   width: 260px;
   height: 260px;
@@ -204,8 +231,14 @@ details p {
   display: block;
 }
 
+.song-info {
+  grid-column: 2;
+  grid-row: 1;
+}
+
 .song-embed {
   grid-column: 1 / -1;
+  grid-row: 2;
   margin-top: 1rem;
 }
 
