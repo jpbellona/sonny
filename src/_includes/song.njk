@@ -1,0 +1,38 @@
+---
+layout: base.njk
+---
+<article class="song">
+  <div class="song-cover">
+    <img src="/assets/images/{{ coverImage }}" alt="Cover art for {{ title }}" />
+  </div>
+
+  <div class="song-embed">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/{{ spotifyTrackId }}?utm_source=generator"
+      width="100%"
+      height="352"
+      frameBorder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      title="{{ title }}"
+    ></iframe>
+  </div>
+
+  <div class="song-info">
+    <h1>EO {{ eoNumber }} – {{ title }} <span class="song-date">({{ date | readableDate }})</span></h1>
+    {{ content | safe }}
+
+    {% if officialLinks %}
+    <div class="official-links">
+      <h2>Official Text</h2>
+      <ul>
+        {% for link in officialLinks %}
+        <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</article>

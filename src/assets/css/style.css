@@ -1,0 +1,280 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --fg: #e8e8e8;
+  --fg-muted: #888;
+  --accent: #4a7c59;
+  --card-bg: #141414;
+  --border: #2a2a2a;
+  --font: system-ui, -apple-system, sans-serif;
+  --max-width: 860px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.site-title:hover {
+  color: var(--accent);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+/* --- Index page --- */
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+  max-height: 220px;
+}
+
+.separator {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about {
+  max-width: var(--max-width);
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.about h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.music {
+  max-width: var(--max-width);
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.music h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.song-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  background: var(--card-bg);
+}
+
+.song-card-cover {
+  grid-row: 1 / 3;
+}
+
+.song-card-cover img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.song-card-embed iframe {
+  display: block;
+  border-radius: 8px;
+}
+
+.song-card-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.song-card-info h3 a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.song-card-info h3 a:hover {
+  color: var(--accent);
+}
+
+.song-subtitle {
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+}
+
+/* --- FAQ --- */
+
+.faq {
+  max-width: var(--max-width);
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.faq h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+details {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--card-bg);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "+ ";
+  color: var(--accent);
+}
+
+details[open] summary::before {
+  content: "– ";
+}
+
+details p {
+  margin-top: 0.75rem;
+  color: var(--fg-muted);
+}
+
+/* --- Song page --- */
+
+.song {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.song-cover img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.song-embed {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+}
+
+.song-info h1 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.song-date {
+  font-weight: 400;
+  color: var(--fg-muted);
+  font-size: 0.9em;
+}
+
+.song-info p {
+  color: var(--fg-muted);
+  margin-bottom: 1rem;
+}
+
+.official-links {
+  margin-top: 1.5rem;
+}
+
+.official-links h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.official-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.official-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.official-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+  .song-card {
+    grid-template-columns: 1fr;
+  }
+
+  .song-card-cover {
+    grid-row: auto;
+  }
+
+  .song-card-cover img {
+    width: 100%;
+    height: auto;
+  }
+
+  .song {
+    grid-template-columns: 1fr;
+  }
+
+  .song-cover img {
+    width: 100%;
+    height: auto;
+  }
+}
