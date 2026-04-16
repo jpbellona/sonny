@@ -9,8 +9,7 @@ layout: base.njk
     Sonny Champagne and the BillionAIres is a music project centered on documenting and
     amplifying the environmental rollbacks and irreparable harms being done on the American
     people through song. Executive Orders since the 47th president's inauguration in January
-    2025 have rolled back significant environmental protections. Songs are being created for
-    each executive order.
+    2025 have rolled back significant environmental protections. The project aims to write a song for each executive order harming the environment.
   </p>
 </section>
 
@@ -22,11 +21,6 @@ layout: base.njk
   <h2>Music</h2>
   {% for song in collections.songs %}
   <article class="song-card">
-    <div class="song-card-cover">
-      <a href="{{ song.url }}">
-        <img src="/assets/images/{{ song.data.coverImage }}" alt="Cover art for {{ song.data.title }}" />
-      </a>
-    </div>
     <div class="song-card-embed">
       <iframe
         style="border-radius:12px"
@@ -41,7 +35,8 @@ layout: base.njk
     </div>
     <div class="song-card-info">
       <h3><a href="{{ song.url }}">EO {{ song.data.eoNumber }} – {{ song.data.title }}</a></h3>
-      <p class="song-subtitle">{{ song.data.subtitle }}</p>
+      <p class="song-subtitle">{{ song.data.date | readableDate }}</p>
+      <p class="song-description">{{ song.content | safe }}</p>
     </div>
   </article>
   {% endfor %}
@@ -52,21 +47,21 @@ layout: base.njk
 
   <details>
     <summary>Who is Sonny Champagne?</summary>
-    <p>Sonny Champagne is an AI persona that serves as a platform for documentation and crafting a counter narrative. Instead of pushing out music as fast as possible, we are focused on curating lyrics from laws, direct quotes from events, and executive orders. We curate, cull, and shape. Should this music take hold, proceeds generated will support organizations fighting for a livable planet (the NRDC, 350.org, and Climate Restoration) and organizations working to pay musicians a living wage in the age of AI (Music Workers Alliance, Human Artistry Campaign, and Harmonic Laboratory).</p>
+    <p>Sonny Champagne is an AI persona that serves as a platform for documentation and crafting a counter narrative. Instead of pushing out music as fast as possible, we are focused on curating lyrics from laws, direct quotes from events, and executive orders. We curate, cull, and shape. Should this music take hold, proceeds generated will support organizations fighting for a livable planet (i.e., the NRDC, 350.org), human-centered music projects, and organizations working to pay musicians a living wage in the age of AI.</p>
   </details>
 
   <details>
-    <summary>Why are you using AI music? Isn't that harmful to the environment?</summary>
-    <p>Yes. Sonny Champagne uses a service that relies on data centers and has a negative environmental impact to generate a thing that points toward environmental harms by Executive Orders. Irony lives here. Giving voice to irreparable harms is necessary, prudent, and situational. Our AI is being fertilized with the fodder of old men and their excrement, helping to fertilize the rising tide of resistance.</p>
+    <summary>Why do you need a music project to highlight environmental harms?</summary>
+    <p>The increase in executive orders focused on the environment has been swift and far-reaching. Leveraging music gives voice to the injustices rendered. An AI music persona enables the project to keep pace with the environmental rollbacks and document the process in real time.</p>
   </details>
 
   <details>
-    <summary>Why do you need AI music to highlight environmental harms?</summary>
-    <p>The increase in executive orders focused on the environment has been swift and far-reaching. Leveraging AI enables the project to keep pace with the environmental rollbacks and document the process in real time.</p>
+    <summary>Is your process harmful to the environment?</summary>
+    <p>All actions carry some cost. Sonny Champagne uses a service that relies on data centers and has a negative environmental impact to generate a thing that points toward environmental harms by Executive Orders. Irony lives here. Giving voice to irreparable harms is necessary, prudent, and situational. Our AI is being fertilized with the fodder of old men and their excrement, helping to fertilize the rising tide of resistance.</p>
   </details>
 
   <details>
-    <summary>Are you using a service that wasn't trained ethically?</summary>
-    <p>We used Suno to create Sonny Champagne. We know it's problematic. Proceeds generated from this project will be used to support organizations working to pay musicians a living wage in the age of AI (Music Workers Alliance, Human Artistry Campaign, and Harmonic Laboratory).</p>
+    <summary>How did you make the music?</summary>
+    <p>We used Suno to create Sonny Champagne. We know AI is problematic. Proceeds generated from this project will be used to support organizations fighting for a livable planet, human made music projects, and organizations working to pay musicians a living wage in the age of AI (e.g. Music Workers Alliance, Human Artistry Campaign, and Harmonic Laboratory).</p>
   </details>
 </section>

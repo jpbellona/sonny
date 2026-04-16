@@ -88,7 +88,7 @@ footer {
 .about h1 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--accent-bright);
+  color: #fff;
 }
 
 .about-logo {
@@ -112,31 +112,15 @@ footer {
 .music h2 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: var(--accent-bright);
+  color: #fff;
 }
 
 .song-card {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  grid-template-rows: auto auto;
-  gap: 1rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.25rem;
   margin-bottom: 2rem;
   background: var(--card-bg);
-}
-
-.song-card-cover {
-  grid-row: 1 / 3;
-}
-
-.song-card-cover img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
 }
 
 .song-card-embed iframe {
@@ -163,6 +147,12 @@ footer {
   font-size: 0.875rem;
 }
 
+.song-description {
+  margin-top: 0.75rem;
+  line-height: 1.5;
+  color: var(--fg);
+}
+
 /* --- FAQ --- */
 
 .faq {
@@ -174,7 +164,7 @@ footer {
 .faq h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: var(--accent-bright);
+  color: #fff;
 }
 
 details {
