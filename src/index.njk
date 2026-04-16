@@ -21,7 +21,7 @@ layout: base.njk
   <h2>Music</h2>
   {% for song in collections.songs %}
   <article class="song-card">
-    <div class="song-card-embed">
+    <div class="song-card-embed-wrapper">
       <iframe
         style="border-radius:12px"
         src="https://open.spotify.com/embed/track/{{ song.data.spotifyTrackId }}?utm_source=generator"

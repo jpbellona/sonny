@@ -123,9 +123,15 @@ footer {
   background: var(--card-bg);
 }
 
-.song-card-embed iframe {
-  display: block;
+.song-card-embed-wrapper {
+  overflow: hidden;
   border-radius: 8px;
+}
+
+.song-card-embed-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 152px;
 }
 
 .song-card-info h3 {
@@ -292,6 +298,10 @@ details p {
     height: auto;
   }
 
+  .song-card-embed-wrapper iframe {
+    height: 220px;
+  }
+
   .song {
     grid-template-columns: 1fr;
   }
@@ -299,5 +309,11 @@ details p {
   .song-cover img {
     width: 100%;
     height: auto;
+  }
+
+  .about-logo {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
   }
 }
