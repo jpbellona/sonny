@@ -9,7 +9,7 @@
   --fg: #e8f1f4;
   --fg-muted: #7a9099;
   --accent: #4a9b7f;
-  --accent-bright: #b8d944;
+  --accent-bright: #ded332;
   --card-bg: #1a3038;
   --border: #2d5a6f;
   --font: system-ui, -apple-system, sans-serif;
@@ -41,7 +41,7 @@ header {
 .site-title {
   color: var(--fg);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -88,7 +88,7 @@ footer {
 .about h1 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: var(--accent-bright);
 }
 
 .about-logo {
@@ -112,7 +112,7 @@ footer {
 .music h2 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: var(--accent);
+  color: var(--accent-bright);
 }
 
 .song-card {
@@ -174,7 +174,7 @@ footer {
 .faq h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: var(--accent);
+  color: var(--accent-bright);
 }
 
 details {
