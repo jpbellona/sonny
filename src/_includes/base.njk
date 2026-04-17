@@ -13,6 +13,7 @@
   <meta property="og:url" content="{{ site.url }}" />
 
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   {% if site.gaId %}
   <!-- Google Analytics -->
@@ -35,7 +36,11 @@
   </main>
 
   <footer>
-    <p>{{ site.title }}</p>
+    <p><a href="/" class="footer-title">{{ site.title }}</a>, produced by <a href="https://jpbellona.com">Jon Bellona</a></p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/sonny_c_and_the_billionaires/" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://open.spotify.com/artist/1pwr4V6Kego7e1y0wufCAN?si=LVDrgibXSByqx9QgNl78sw" title="Spotify" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+    </div>
   </footer>
 </body>
 </html>
