@@ -13,6 +13,4 @@ officialLinks:
     url: "https://www.federalregister.gov/documents/2025/02/06/2025-02345/unleashing-prosperity-through-deregulation"
 ---
 
-Requires every federal agency to identify at least ten existing regulations or guidance documents to repeal for each new one, and mandates that total incremental regulatory costs be "significantly less than zero." This global deregulatory budget intensifies pressure to repeal environmental, climate, and health protections across EPA, Interior, Energy, and others, and is being implemented inside resource agencies explicitly as a mandate to "cut all red tape" around extraction projects.
-
-Executive Order 14192 is a structural rollback. It hard‑codes a deregulatory quota and a cost‑only budget logic that tilts every major agency—including the environmental and resource agencies—toward dismantling protections rather than strengthening them.
+The executive order requires every federal agency to identify at least ten existing regulations or guidance documents to repeal for each new one, and mandates that total incremental regulatory costs be "significantly less than zero." This global deregulatory budget intensifies pressure to repeal environmental, climate, and health protections across EPA, Interior, Energy, and others, and is being implemented inside resource agencies explicitly as a mandate to "cut all red tape" around extraction projects.
